@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    width: 80vh;
+    align-self: center;
+}
+
+.divGroup{
+    display: flex;
+    flex: 1;
+}
+
+.singleDiv{
+    flex: 1;
+    border-style: groove;
+}
+
+.singleDiv:hover{
+    background-color: gold;
+}
+.giveColorClass{
+    background-color: gold;
+}
