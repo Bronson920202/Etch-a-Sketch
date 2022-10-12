@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     height: 100vh;
     
 }
@@ -11,6 +11,15 @@ body {
     height: 80vh;
     width: 80vh;
     align-self: center;
+}
+#SliderContainer{
+    border-style: groove;
+    flex-basis: 400px;
+    margin-top: 25%;
+    margin-bottom: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
+    
 }
 
 .divGroup{
