@@ -2,39 +2,48 @@ body {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    
+
 }
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
     height: 80vh;
     width: 80vh;
     align-self: center;
-}
-#SliderContainer{
-    border-style: groove;
-    flex-basis: 400px;
-    margin-top: 25%;
-    margin-bottom: 25%;
-    padding-left: 10%;
-    padding-right: 10%;
-    
+    margin-left: 50px;
 }
 
-.divGroup{
+#sliderContainer {
+    display: flex;
+    flex-direction: row;
+    border-style: groove;
+    flex-basis: 400px;
+    margin-top: 10%;
+    margin-bottom: 25%;
+
+}
+
+#sliderContent {
+    flex: 1;
+    margin: 50px;
+    border-style: groove;
+}
+
+.divGroup {
     display: flex;
     flex: 1;
 }
 
-.singleDiv{
+.singleDiv {
     flex: 1;
     border-style: groove;
 }
 
-.singleDiv:hover{
+.singleDiv:hover {
     background-color: gold;
 }
-.giveColorClass{
+
+.giveColorClass {
     background-color: gold;
 }
