@@ -24,10 +24,18 @@ body {
 
 }
 
+#sliderHeader {
+    font-size: large;
+    
+}
+
 #sliderContent {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     margin: 50px;
     border-style: groove;
+    align-items: center;
 }
 
 .divGroup {
