@@ -6,9 +6,10 @@ const containerDiv = document.querySelector('#container');
 
 const sliderHeader = document.querySelector('#sliderHeader');
 const slider = document.querySelector('#slider');
+const checkbox = document.querySelector('#checkbox');
 var resolution;
 
-var canPaint = false; 
+var canPaint = false;
 
 sliderHeader.textContent = slider.getAttribute('value');
 slider.oninput = function () {
@@ -34,7 +35,7 @@ function generateCanvas() {
             var rowDiv = document.createElement('div');
             createDiv.appendChild(rowDiv);
             rowDiv.classList.add("singleDiv");
-            rowDiv.setAttribute("onmouseover", "addColorClass(this)");
+            rowDiv.setAttribute("onmouseover", "addColorClass(this);");
                   
         }
         
@@ -54,6 +55,7 @@ function addColorClass(element){
 containerDiv.onmousedown = function () {canPaint = true; console.log(canPaint);}
 containerDiv.onmouseup = function () {canPaint = false; console.log(canPaint);}
 containerDiv.onmouseleave = function () {canPaint = false; console.log(canPaint);}
+
 
 
 

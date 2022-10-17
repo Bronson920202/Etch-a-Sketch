@@ -1,41 +1,61 @@
 body {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
+    background-image: url(https://images.pexels.com/photos/235985/pexels-photo-235985.jpeg?cs=srgb&dl=pexels-pixabay-235985.jpg&fm=jpg);
 
 }
+
+h5 {
+    font-size: xx-large;
+}
+
+
 
 #container {
     display: flex;
     flex-direction: column;
     height: 80vh;
     width: 80vh;
-    align-self: center;
-    margin-left: 50px;
+    
 }
 
 #sliderContainer {
     display: flex;
     flex-direction: row;
+    flex: 1;
     border-style: groove;
-    flex-basis: 400px;
-    margin-top: 10%;
-    margin-bottom: 25%;
+    border-color: black;
+    max-width: 200px;
+    padding: 50px;
+    background-color: rgba(255, 140, 0, .5);
 
 }
 
 #sliderHeader {
-    font-size: large;
+    flex: 1;
+    font-size: xx-large;
+    max-height: min-content;
+    margin-bottom: 20px;
     
 }
 
 #sliderContent {
     display: flex;
     flex-direction: column;
-    flex: 1;
-    margin: 50px;
-    border-style: groove;
+    justify-content: center;
     align-items: center;
+    flex: 1;
+    border-style: groove;
+    border-color: black;
+    padding: 20px;
+    
+}
+
+#checkbox{
+    transform: scale(4);
 }
 
 .divGroup {
@@ -45,13 +65,13 @@ body {
 
 .singleDiv {
     flex: 1;
-    border-style: groove;
+    border-style: double;
 }
 
 .singleDiv:hover {
-    background-color: gold;
+    background-color: black;
 }
 
 .giveColorClass {
-    background-color: gold;
+    background-color: black;
 }
