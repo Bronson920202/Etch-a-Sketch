@@ -65,7 +65,7 @@ h5 {
 
 .singleDiv {
     flex: 1;
-    border-style: double;
+    background-color: white;
 }
 
 .singleDiv:hover {

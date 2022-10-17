@@ -10,6 +10,7 @@ const checkbox = document.querySelector('#checkbox');
 var resolution;
 
 var canPaint = false;
+var randomColorMode = false;
 
 sliderHeader.textContent = slider.getAttribute('value');
 slider.oninput = function () {
@@ -18,6 +19,13 @@ slider.oninput = function () {
 }
 
 slider.addEventListener('click', generateCanvas);
+checkbox.addEventListener('change', function () {
+    if(this.checked){
+        randomColorMode = true;
+    }
+    else {randomColorMode = false;};
+   
+});
 
 function generateCanvas() {    
     if(rows.length > 0){
@@ -35,26 +43,38 @@ function generateCanvas() {
             var rowDiv = document.createElement('div');
             createDiv.appendChild(rowDiv);
             rowDiv.classList.add("singleDiv");
-            rowDiv.setAttribute("onmouseover", "addColorClass(this);");
+            rowDiv.setAttribute("onmouseover", "addColorClass(this); addRandomColor(this);");
                   
         }
         
     }
     individualDivs = document.querySelectorAll('.singleDiv');
     rows = document.querySelectorAll('.divGroup');
+
+    containerDiv.style.boxShadow = "5px 5px black";
     
     
 }
 
+
 function addColorClass(element){  
     if(!canPaint) return;
+    if(randomColorMode) return;
        element.classList.add("giveColorClass");
        
 }
 
-containerDiv.onmousedown = function () {canPaint = true; console.log(canPaint);}
-containerDiv.onmouseup = function () {canPaint = false; console.log(canPaint);}
-containerDiv.onmouseleave = function () {canPaint = false; console.log(canPaint);}
+function addRandomColor(element){
+    if(!canPaint) return;
+    if(randomColorMode){
+        const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+        element.style.backgroundColor = "#" + randomColor;
+    }
+}
+
+containerDiv.onmousedown = function () {canPaint = true;}
+containerDiv.onmouseup = function () {canPaint = false;}
+containerDiv.onmouseleave = function () {canPaint = false;}
 
 
 
